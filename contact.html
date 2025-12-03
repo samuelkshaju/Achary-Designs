@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Achary Designs</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#071226;
+      --panel:#0f1a2a;
+      --ink:#e6eef6;
+      --accent:#f6b42d;
+      --muted:#9fb0c8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+    /* Hero-like image background */
+    .contact-hero {
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 18px;
+      background-image:
+        linear-gradient(180deg, rgba(7,18,38,0.72), rgba(7,18,38,0.72)),
+        url('/path/to/contact-bg.jpg'); /* <-- replace this with your image path */
+      background-size:cover;
+      background-position:center;
+    }
+
+    /* translucent form panel */
+    .panel {
+      width:100%;
+      max-width:960px;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 20px 60px rgba(2,6,12,0.6);
+      padding:28px;
+      border-radius:12px;
+    }
+
+    /* left: info / image/card */
+    .info {
+      padding:8px 6px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    .brand-head {
+      display:flex;gap:12px;align-items:center;
+    }
+    .brand-logo {
+      width:68px;height:68px;border-radius:10px;background:linear-gradient(180deg,#0b1624, #071726);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;
+    }
+    .brand-title{font-family:Anton, sans-serif;font-size:20px;color:var(--ink)}
+    .brand-sub{color:var(--muted);font-size:13px}
+
+    .info p{color:var(--muted);line-height:1.45}
+    .contact-meta{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+    .meta-item{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:14px}
+    .meta-item i{width:22px;text-align:center;color:var(--accent)}
+
+    /* form */
+    form.contact-form {
+      padding:8px;
+      display:flex;flex-direction:column;gap:12px;
+    }
+    label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+    input[type="text"], input[type="tel"], textarea {
+      width:100%;
+      padding:12px 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04);
+      color:var(--ink);
+      border-radius:8px;
+      font-size:15px;
+      resize:vertical;
+    }
+    textarea { min-height:140px; max-height:320px; }
+
+    .row { display:flex; gap:12px; }
+    .row .col { flex:1; }
+
+    .actions { display:flex; gap:12px; align-items:center; margin-top:6px; }
+    .btn-send {
+      background:var(--accent);
+      color:#061019;
+      border:0;
+      padding:10px 16px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .btn-clear {
+      background:transparent;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.04);
+      padding:8px 14px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    .note { font-size:13px;color:var(--muted);margin-top:6px; }
+
+    .success {
+      display:none;
+      padding:10px 12px;
+      border-radius:8px;
+      background:rgba(121, 199, 63, 0.12);
+      color:#dff7d9;
+      border:1px solid rgba(121,199,63,0.18);
+      font-weight:600;
+    }
+
+    /* responsive */
+    @media (max-width:980px) {
+      .panel { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0s !important; transition-duration: 0s !important; }
+    }
+
+    a:focus, input:focus, textarea:focus, button:focus { outline:3px solid rgba(246,180,45,0.12); outline-offset:3px }
+  </style>
+</head>
+<body>
+
+  <main class="contact-hero" aria-labelledby="contact-heading">
+    <div class="panel" role="region" aria-label="Contact form panel">
+      <!-- left info -->
+      <div class="info">
+        <div class="brand-head">
+          <div class="brand-logo" aria-hidden="true">
+            <!-- small logo (replace with <img> if you prefer) -->
+            <svg width="34" height="34" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none"><g fill="currentColor"><rect x="22" y="12" width="4" height="34" rx="1"/><rect x="30" y="12" width="4" height="34" rx="1"/><rect x="38" y="12" width="4" height="34" rx="1"/></g></svg>
+          </div>
+          <div>
+            <div class="brand-title">ACHARY DESIGNS </div>
+            <div class="brand-sub">ENGINEERING INNOVATION FOR A BETTER TOMORROW</div>
+          </div>
+        </div>
+
+        <p>Tell us about your project, site constraints or a small brief. We respond within 2 business days and will advise on an initial consultation plan.</p>
+
+        <div class="contact-meta" aria-hidden="false">
+          <div class="meta-item"><i class="fa-solid fa-phone"></i><div>+91 6282 923 370</div></div>
+          <div class="meta-item"><i class="fa-regular fa-envelope"></i><div><a href="mailto:hello@acharydesigns.com" style="color:var(--accent);text-decoration:none">hello@acharydesigns.com</a></div></div>
+          <div class="meta-item"><i class="fa-solid fa-location-dot"></i><div>Calicut Road, Kunnamkulam, Thrissur, Kerala</div></div>
+        </div>
+
+        <div class="note">You may also email us or call — or use this form to open your email client with the enquiry pre-filled.</div>
+      </div>
+
+      <!-- right: form -->
+      <form id="contactForm" class="contact-form" novalidate>
+        <h2 id="contact-heading" style="margin:0 0 6px;font-family:Anton, sans-serif;color:var(--ink);">Contact Us</h2>
+        <p style="margin:0 0 8px;color:var(--muted)">Fill the form and press Send — your email client will open to complete sending.</p>
+
+        <div class="row">
+          <div class="col">
+            <label for="name">Full name *</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required aria-required="true">
+          </div>
+
+          <div class="col">
+            <label for="phone">Contact number *</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 9XXXXXXXXX" pattern="^[+]?[\d\s()-]{6,20}$" required aria-required="true" inputmode="tel">
+          </div>
+        </div>
+
+        <label for="message">Enquiry / Project details *</label>
+        <textarea id="message" name="message" placeholder="Describe the project, timeline, budget, site location..." required aria-required="true"></textarea>
+
+        <div class="actions">
+          <button type="submit" class="btn-send"><i class="fa-solid fa-paper-plane" style="margin-right:8px"></i>Send inquiry</button>
+          <button type="button" class="btn-clear" id="clearBtn">Clear</button>
+          <div class="success" id="successMsg" role="status" aria-live="polite">Message prepared — opening your email client…</div>
+        </div>
+
+        <div style="margin-top:6px;color:var(--muted);font-size:13px">By sending you agree we may contact you about this enquiry.</div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // Simple client-side behavior:
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('successMsg');
+    const clearBtn = document.getElementById('clearBtn');
+
+    clearBtn.addEventListener('click', ()=> {
+      form.reset();
+      success.style.display = 'none';
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // HTML5 validation
+      if (!form.reportValidity()) return;
+
+      const name = encodeURIComponent(form.name.value.trim());
+      const phone = encodeURIComponent(form.phone.value.trim());
+      const message = encodeURIComponent(form.message.value.trim());
+
+      // Build mailto - change recipient if needed
+      const recipient = 'hello@acharydesigns.com';
+      const subject = encodeURIComponent('Website enquiry from ' + (form.name.value || 'Website visitor'));
+      const body = [
+        'Name: ' + name,
+        'Phone: ' + phone,
+        '',
+        'Enquiry:',
+        message
+      ].join('%0D%0A');
+
+      const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+      // show success text
+      success.style.display = 'inline-block';
+
+      // open mail client (this will be blocked if popup blocked; it's standard behavior)
+      window.location.href = mailto;
+
+      // If mail client not available, keep success message visible (user can copy)
+      setTimeout(()=>{ success.style.display = 'none'; }, 6000);
+    });
+  </script>
+
+</body>
+</html>

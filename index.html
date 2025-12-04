@@ -372,26 +372,279 @@
 })();
 </script>
 
+<!-- ===== ABOUT SECTION (responsive) ===== -->
+<section id="about" class="about-section container" aria-labelledby="about-heading">
+  <h2 id="about-heading" class="reveal">ABOUT</h2>
+
+  <div class="about-intro reveal">
+    <p>
+      At Achary Designs, we are committed to transforming ideas into enduring structures through innovation, precision, and excellence in civil engineering. With a deep focus on quality and functionality, we provide end-to-end solutions that meet the evolving demands of modern infrastructure and design.
+    </p>
+  </div>
+
+  <div class="about-grid">
+
+    <!-- WHAT WE DO -->
+    <article class="about-card reveal" aria-labelledby="about-what">
+      <div class="card-icon" aria-hidden="true">📐</div>
+      <div>
+        <h3 id="about-what">What we do</h3>
+
+        <!-- POINTS AS SEPARATE DIVS -->
+        <div class="points-wrapper">
+
+          <div class="point-box">
+            Innovative Civil Engineering Solutions – From concept to completion, we deliver reliable, efficient, and sustainable engineering outcomes.
+          </div>
+
+          <div class="point-box">
+            Planning | Structural | Design – Expertise in structural analysis, concrete & steel design, and advanced planning techniques.
+          </div>
+
+          <div class="point-box">
+            3D Modelling (Interior & Exterior) – Realistic visualization through cutting-edge tools for enhanced client confidence and accuracy.
+          </div>
+
+          <div class="point-box">
+            Site Plans – Preparation of contour maps, topographic studies, and detailed layouts to ensure precision and compliance.
+          </div>
+
+          <div class="point-box">
+            Mix Design & Quality Management – Delivering optimized materials and processes for durable, cost-effective construction.
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- VISION -->
+    <article class="about-card reveal" aria-labelledby="about-vision">
+      <div class="card-icon" aria-hidden="true">🔭</div>
+      <div>
+        <h3 id="about-vision">Our Vision</h3>
+        <p>
+          To be a trusted name in civil engineering by blending traditional expertise with modern innovation, building spaces that inspire, endure, and serve communities for generations.
+        </p>
+      </div>
+    </article>
+
+    <!-- WHY CHOOSE US -->
+    <article class="about-card reveal" aria-labelledby="about-why">
+      <div class="card-icon" aria-hidden="true">🛠️</div>
+      <div>
+        <h3 id="about-why">Why choose us?</h3>
+
+        <ul class="mini-list">
+          <li>Client-focused approach</li>
+          <li>Technical excellence and accuracy</li>
+          <li>Sustainable and efficient designs</li>
+          <li>Commitment to quality and timely delivery</li>
+        </ul>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ====== CSS FOR ABOUT SECTION ====== -->
+<style>
+.about-section {
+  padding: 56px 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  border-radius: 12px;
+  margin: 28px 0;
+}
+
+.about-section h2 {
+  font-family: Anton, sans-serif;
+  font-size: 28px;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.about-intro p {
+  color: var(--muted);
+  max-width: 880px;
+  line-height: 1.6;
+  margin: 10px 0 18px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Card Styling */
+.about-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--panel), #071726);
+  border: 1px solid rgba(255,255,255,0.02);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.45);
+  align-items: flex-start;
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.55);
+}
+
+/* Icon */
+.card-icon {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Headings & Text */
+.about-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: var(--ink);
+}
+.about-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ==== NEW: One-after-another div points ==== */
+.points-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.point-box {
+  background: rgba(255,255,255,0.03);
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  border-left: 3px solid var(--accent);
+  transition: 260ms ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.point-box:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-3px);
+}
+
+/* Why choose us bullet list */
+.mini-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mini-list li {
+  color: var(--muted);
+  font-size: 14px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.mini-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Responsive Layout */
+@media (max-width: 980px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: all 700ms cubic-bezier(.2,.9,.2,1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: none;
+}
+</style>
 
 
 
     <!-- WORKS / GALLERY -->
-    <section id="works" class="gallery">
-      <div class="container">
-        <h2 class="reveal">Our Works</h2>
-        <p class="reveal" style="color:var(--muted)">Selected projects — elevations, interiors and completed works.</p>
+<section id="works" class="gallery">
+  <div class="container">
+    <h2 class="reveal">Our Works</h2>
+    <p class="reveal" style="color:var(--muted)">Selected projects — elevations, interiors and completed works.</p>
 
-        <div class="gallery-grid reveal" style="margin-top:12px">
-          <!-- placeholder images, replace with project photos -->
-          <img src="https://via.placeholder.com/300x200?text=3D+1" alt="project 1">
-          <img src="https://via.placeholder.com/300x200?text=3D+2" alt="project 2">
-          <img src="https://via.placeholder.com/300x200?text=Interior+1" alt="project 3">
-          <img src="https://via.placeholder.com/300x200?text=Interior+2" alt="project 4">
-          <img src="https://via.placeholder.com/300x200?text=Completed+1" alt="project 5">
-          <img src="https://via.placeholder.com/300x200?text=Completed+2" alt="project 6">
-        </div>
-      </div>
-    </section>
+    <div class="gallery-grid reveal" style="margin-top:12px">
+      <img src="pic 1.jpeg" alt="project 1">
+      <img src="pic 2.jpeg" alt="project 2">
+      <img src="pic 4.jpeg" alt="project 4">
+    </div>
+  </div>
+</section>
+
+<style>
+/* FIXED GRID AREA IMAGE FIT */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+  gap: 16px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;   /* fixed display height */
+  object-fit: cover;   /* crop + fit perfectly */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* one image per row on mobile */
+  }
+  .gallery-grid img {
+    height: 240px;
+  }
+}
+</style>
+
 
     <!-- TEAM -->
     <section id="team" class="team container">

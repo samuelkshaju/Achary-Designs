@@ -146,6 +146,7 @@
             <!-- small logo (replace with <img> if you prefer) -->
             <svg width="34" height="34" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none"><g fill="currentColor"><rect x="22" y="12" width="4" height="34" rx="1"/><rect x="30" y="12" width="4" height="34" rx="1"/><rect x="38" y="12" width="4" height="34" rx="1"/></g></svg>
           </div>
+          
           <div>
             <div class="brand-title">ACHARY DESIGNS </div>
             <div class="brand-sub">ENGINEERING INNOVATION FOR A BETTER TOMORROW</div>
@@ -195,48 +196,43 @@
   </main>
 
   <script>
-    // Simple client-side behavior:
-    const form = document.getElementById('contactForm');
-    const success = document.getElementById('successMsg');
-    const clearBtn = document.getElementById('clearBtn');
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('successMsg');
+  const clearBtn = document.getElementById('clearBtn');
 
-    clearBtn.addEventListener('click', ()=> {
-      form.reset();
-      success.style.display = 'none';
-    });
+  clearBtn.addEventListener('click', ()=> {
+    form.reset();
+    success.style.display = 'none';
+  });
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // HTML5 validation
-      if (!form.reportValidity()) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
 
-      const name = encodeURIComponent(form.name.value.trim());
-      const phone = encodeURIComponent(form.phone.value.trim());
-      const message = encodeURIComponent(form.message.value.trim());
+    const name = encodeURIComponent(form.name.value.trim());
+    const phone = encodeURIComponent(form.phone.value.trim());
+    const message = encodeURIComponent(form.message.value.trim());
 
-      // Build mailto - change recipient if needed
-      const recipient = 'hello@acharydesigns.com';
-      const subject = encodeURIComponent('Website enquiry from ' + (form.name.value || 'Website visitor'));
-      const body = [
-        'Name: ' + name,
-        'Phone: ' + phone,
-        '',
-        'Enquiry:',
-        message
-      ].join('%0D%0A');
+    // WhatsApp number (add country code, no + symbol)
+    const whatsappNumber = "916282923370"; // your number (example)
 
-      const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    // Message format
+    const whatsappMessage =
+      "ACHARY DESIGNS ENQUIRY%0A%0A" +
+      "Name: " + name + "%0A" +
+      "Phone: " + phone + "%0A" +
+      "Enquiry:%0A" + message;
 
-      // show success text
-      success.style.display = 'inline-block';
+    // WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-      // open mail client (this will be blocked if popup blocked; it's standard behavior)
-      window.location.href = mailto;
+    window.open(whatsappURL, "_blank"); // Open WhatsApp
 
-      // If mail client not available, keep success message visible (user can copy)
-      setTimeout(()=>{ success.style.display = 'none'; }, 6000);
-    });
-  </script>
+    success.style.display = 'inline-block'; // optional UI message
+    setTimeout(()=>{ success.style.display = 'none'; }, 6000);
+  });
+</script>
+
 
 </body>
 </html>

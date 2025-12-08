@@ -778,6 +778,47 @@ footer .socials a:hover {
   color: #000 !important;
 }
 
+/* ✅ Mobile Footer Fix */
+@media (max-width: 600px) {
+
+  footer {
+    padding: 16px 10px;
+  }
+
+  .foot-inner {
+    flex-direction: column;     /* stack logo + socials */
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .socials {
+    width: 100%;
+    flex-wrap: wrap;            /* wrap buttons properly */
+    gap: 8px;
+  }
+
+  .socials a {
+    flex: 1 1 48%;              /* 2 buttons per row */
+    text-align: center;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  footer .logo {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  footer div[style*="font-weight:700"] {
+    font-size: 14px;
+  }
+
+  footer div[style*="font-size:13px"] {
+    font-size: 11px;
+  }
+}
+
+
     </style>
   </footer>
 

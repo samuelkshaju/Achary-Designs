@@ -115,7 +115,7 @@
   <header class="navbar container">
     <div class="brand">
       <div class="logo" aria-hidden="true">
-          <img src="Logo.png" alt="Achary Designs Logo" style="width: 75px;px;height: 75px;;object-fit:contain;">
+          <img src="Logo.png" alt="Achary Designs Logo" style="width: 100%;px;height: 100%;;object-fit:contain;">
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Achary Designs logo"><g><rect x="22" y="12" width="4" height="34" rx="1"/><rect x="30" y="12" width="4" height="34" rx="1"/><rect x="38" y="12" width="4" height="34" rx="1"/></g></svg>
       </div>
       <div>
@@ -146,16 +146,22 @@
 
   <!-- SLIDES -->
   <div class="carousel">
-    <img class="slide" src="ph 1.png" alt="Project photo 1">
+    <img class="slide" src="ph 1.jpeg" alt="Project photo 1">
     <img class="slide" src="ph 2.png" alt="Project photo 2">
-    <img class="slide" src="ph 3.png" alt="Project photo 3">
+    <img class="slide" src="ph 3.jpeg" alt="Project photo 3">
+    <img class="slide" src="ph 4.png" alt="Project photo 4">
+    <img class="slide" src="ph 5.jpeg" alt="Project photo 5">
+    <img class="slide" src="ph 6.png" alt="Project photo 6">
   </div>
 
   <!-- SWITCHES -->
   <div class="carousel-controls">
     <button class="ctrl" data-index="0"></button>
     <button class="ctrl" data-index="1"></button>
-    <button class="ctrl" data-index="2"></button>
+    <button class="ctrl" data-index="3"></button>
+    <button class="ctrl" data-index="4"></button>
+    <button class="ctrl" data-index="5"></button>
+    <button class="ctrl" data-index="6"></button>
   </div>
 
   <!-- TOP-LEFT LOGO -->
@@ -283,8 +289,8 @@
 
 /* LOGO */
 .brand-logo {
-  width: 64px;
-  height: 64px;
+  width: 125px;
+  height: 125px;
   border-radius: 8px;
   background: rgba(255,255,255,0.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
@@ -648,34 +654,71 @@
 
 
     <!-- TEAM -->
-    <section id="team" class="team container">
-      <h2 class="reveal">Our Team</h2>
-      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
-        <div class="team-card reveal">
-          <div class="avatar"></div>
-          <div>
-            <strong>Syam S Achary </strong>
-            <div style="color:var(--muted);font-size:13px">Founder<br>Phone: 6282 923 370</div>
-          </div>
-        </div>
+<section id="team" class="team container">
+  <h2 class="reveal">Our Team</h2>
 
-        <div class="team-card reveal">
-          <div class="avatar">BS</div>
-          <div>
-            <strong>Krishna Sunilkumar </strong>
-            <div style="color:var(--muted);font-size:13px">Founder<br>Phone: 90375 58839</div>
-          </div>
-        </div>
+  <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
 
-        <div class="team-card reveal">
-          <div class="avatar">AD</div>
-          <div>
-            <strong>Anagha Pavithran</strong>
-            <div style="color:var(--muted);font-size:13px">Founder<br>Phone: 90377 09054</div>
-          </div>
+    <div class="team-card reveal">
+      <div class="avatar">
+        <img src="syam.jpeg" alt="Syam S Achary">
+      </div>
+      <div>
+        <strong>Syam S Achary</strong>
+        <div style="color:var(--muted);font-size:13px">
+          Founder<br>Phone: 6282 923 370
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="team-card reveal">
+      <div class="avatar">
+        <img src="krishna.jpeg" alt="Krishna Sunilkumar">
+      </div>
+      <div>
+        <strong>Krishna Sunilkumar</strong>
+        <div style="color:var(--muted);font-size:13px">
+          Founder<br>Phone: 90375 58839
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <div class="avatar">
+        <img src="anagha.jpeg" alt="Anagha Pavithran">
+      </div>
+      <div>
+        <strong>Anagha Pavithran</strong>
+        <div style="color:var(--muted);font-size:13px">
+          Founder<br>Phone: 90377 09054
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<style>
+  .avatar {
+  width: 64px;      /* same space as before */
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 fills space without stretching */
+  display: block;
+}
+
+</style>
+
+
 
     <!-- CONTACT -->
     <section id="contact" class="contact container">
@@ -683,7 +726,7 @@
       <div style="display:flex;gap:20px;margin-top:12px;flex-wrap:wrap">
         <div class="card" style="flex:1;min-width:260px">
           <strong style="color:var(--ink)">Address</strong>
-          <p style="color:var(--muted);margin-top:8px">Calicut Road, Kunnamkulam, Thrissur - 680503, Kerala - India<br>Phone: +91 6282 923 370<br>Email: <a href="mailto:contact.samuelkshaju@gmail.com">contact.samuelkshaju@gmail.com</a></p>
+          <p style="color:var(--muted);margin-top:8px">Calicut Road, Kunnamkulam, Thrissur - 680503, Kerala - India<br>Phone: +91 6282 923 370<br>+91 90377 09054<br> +91 90375 58839<br>Email: <a href="mailto:contact.samuelkshaju@gmail.com">acharydesign@gmail.com</a></p>
         </div>
       </div>
 
@@ -696,7 +739,7 @@
     <div class="container foot-inner">
       <div style="display:flex;gap:12px;align-items:center">
         <div class="logo" style="width:44px;height:44px">
-          <img src="Logo.png" alt="Achary Designs Logo" style="width:75px;height:75px;object-fit:contain;">
+          <img src="Logo.png" alt="Achary Designs Logo" style="width:100%;height:100%;object-fit:contain;">
           <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none"><g fill="var(--accent)"><rect x="22" y="12" width="4" height="34" rx="1"/><rect x="30" y="12" width="4" height="34" rx="1"/><rect x="38" y="12" width="4" height="34" rx="1"/></g></svg>
         </div>
         <div>
@@ -706,7 +749,9 @@
       </div>
 
       <div class="socials">
-        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+<a href="https://wa.me/916282923370" aria-label="WhatsApp" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
         <a href="https://www.linkedin.com/company/achary-designs/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
         <a href="https://www.instagram.com/achary_design?igsh=M3hjeW4zaXI3djZm"> Instagram</a>
       </div>
